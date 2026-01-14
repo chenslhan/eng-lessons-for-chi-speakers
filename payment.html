@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>付款信息 | 英语课程（面向中文学习者）</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html" aria-label="返回首页">
+      <div class="brand-badge"></div>
+      <div class="brand-title">English for Chinese Speakers</div>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="trial.html">预约30分钟试课</a>
+      <a href="payment.html">付款信息</a>
+      <a href="register.html">学员登记（仅限已付款）</a>
+      <a href="availability.html">查看我的时间安排</a>
+      <a href="about.html">关于我</a>
+      <a href="contact.html">联系我</a>
+    </div>
+  </div>
+</div>
+
+<div class="container section" style="padding-top:22px;">
+  <div class="card card-pad">
+    <div class="kicker">Payment Information</div>
+    <h1 style="margin-top:10px;">付款信息</h1>
+    <p class="sub">本页面将用于展示本网站对应的付款方式与付款链接。你稍后会提供具体付款信息，我将再为你补齐。</p>
+
+    <div class="grid-2" style="margin-top:12px;">
+      <div class="card card-pad" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); box-shadow:none;">
+        <div class="h2">价格（已锁定）</div>
+        <ul class="list">
+          <li>30分钟试课：<strong>SGD 10</strong></li>
+          <li>50分钟正式课：<strong>SGD 40</strong></li>
+        </ul>
+      </div>
+      <div class="card card-pad" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); box-shadow:none;">
+        <div class="h2">付款与确认（占位说明）</div>
+        <div class="notice">
+          你将补充：付款方式（例如 PayPal / Wise / 其他）、付款链接/二维码、以及“付款后填写学员登记”的确认流程说明。<br/><br/>
+          目前网站结构已预留入口：<strong>学员登记（仅限已付款）</strong>。
+        </div>
+      </div>
+    </div>
+
+    <div class="hr"></div>
+    <div class="notice">
+      <strong>你稍后提供付款信息后，我会为你做这些更新：</strong>
+      <ul class="list">
+        <li>插入每个付款方式的清晰标题与链接/二维码</li>
+        <li>加入“预约 ≠ 确认、需付款后才开课”的规则文案</li>
+        <li>加入“付款后填写学员登记”的链接与说明</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="container">
+    <div class="hr"></div>
+    <div>© <span id="year"></span> Si Han Chen</div>
+  </div>
+</div>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
