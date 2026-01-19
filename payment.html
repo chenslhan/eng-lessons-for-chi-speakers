@@ -7,17 +7,18 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
 <div class="nav">
   <div class="container nav-inner">
-    <a class="brand" href="index.html" aria-label="返回首页">
-      <span class="brand-badge" aria-hidden="true"></span>
+    <a class="brand" href="index.html">
+      <span class="brand-badge"></span>
       <span>面向中文学习者的英语课程</span>
     </a>
     <div class="nav-links">
       <a href="index.html">首页</a>
       <a href="trial.html">30分钟试课</a>
       <a href="payment.html">付款信息</a>
-      <a href="https://cal.com/sihan/50分钟-英语课程" target="_blank" rel="noopener">现有学员预约课程</a>
+      <a href="https://cal.com/sihan/50分钟-英语课程" target="_blank">现有学员预约课程</a>
       <a href="availability.html">时间安排</a>
       <a href="about.html">关于我</a>
       <a href="contact.html">联系我</a>
@@ -28,67 +29,130 @@
 <section class="section">
   <div class="container">
     <div class="card">
-      <h1>付款信息</h1>
 
-      <!-- 30分钟试课 -->
-      <h2>30分钟试课</h2>
+      <h1>付款方式</h1>
+
+      <!-- ===================== -->
+      <!-- 30 分钟试课 -->
+      <!-- ===================== -->
+      <h2>30分钟试课（Trial Lesson）</h2>
       <p><strong>费用：</strong>SGD 10</p>
-      <div class="qr-codes">
-        <img src="wise-10.png" alt="Wise 10 SGD">
-        <img src="paypal-10.png" alt="Paypal 10 SGD">
-        <img src="alipay-10.png" alt="Alipay 10 SGD">
+
+      <div class="payment-grid">
+        <div class="payment-card">
+          <img src="wise-10.png" alt="Wise 10 SGD">
+          <a class="btn btn-secondary" href="#">Wise 支付（10 SGD）</a>
+        </div>
+        <div class="payment-card">
+          <img src="paypal-10.png" alt="PayPal 10 SGD">
+          <a class="btn btn-primary" href="#">PayPal 支付（10 SGD）</a>
+        </div>
+        <div class="payment-card">
+          <img src="alipay-10.png" alt="Alipay 10 SGD">
+          <span class="badge">支付宝</span>
+        </div>
       </div>
 
-      <!-- 50分钟正式课 -->
-      <h2>50分钟正式课</h2>
+      <!-- ===================== -->
+      <!-- 50 分钟正式课 -->
+      <!-- ===================== -->
+      <h2>50分钟正式课（Single Lesson）</h2>
       <p><strong>费用：</strong>SGD 40</p>
-      <div class="qr-codes">
-        <img src="wise-40.png" alt="Wise 40 SGD">
-        <img src="paypal-40.png" alt="Paypal 40 SGD">
-        <img src="alipay-40.png" alt="Alipay 40 SGD">
+
+      <div class="payment-grid">
+        <div class="payment-card">
+          <img src="wise-40.png" alt="Wise 40 SGD">
+          <a class="btn btn-secondary" href="#">Wise 支付（40 SGD）</a>
+        </div>
+        <div class="payment-card">
+          <img src="paypal-40.png" alt="PayPal 40 SGD">
+          <a class="btn btn-primary" href="#">PayPal 支付（40 SGD）</a>
+        </div>
+        <div class="payment-card">
+          <img src="alipay-40.png" alt="Alipay 40 SGD">
+          <span class="badge">支付宝</span>
+        </div>
       </div>
 
+      <!-- ===================== -->
       <!-- 套餐 A -->
-      <h2>套餐 A — 5节课</h2>
+      <!-- ===================== -->
+      <h2>套餐 A — 5 节课</h2>
       <p><strong>费用：</strong>SGD 195</p>
-      <p>
-        <a href="https://www.paypal.com/ncp/payment/62ANSUWPRUX76" target="_blank" rel="noopener">Paypal 195 SGD Link</a><br>
-        <a href="https://wise.com/pay/r/PxoNdZqBPngSYzA" target="_blank" rel="noopener">Wise 195 SGD Link</a>
-      </p>
-      <div class="qr-codes">
-        <img src="wise-195.png" alt="Wise 195 SGD">
-        <img src="paypal-195.png" alt="Paypal 195 SGD">
-        <img src="alipay-195.jpeg" alt="Alipay 195 SGD">
+
+      <div class="payment-grid">
+        <div class="payment-card">
+          <img src="wise-195.png" alt="Wise 195 SGD">
+          <a class="btn btn-secondary" href="https://wise.com/pay/r/PxoNdZqBPngSYzA" target="_blank">
+            Wise 支付（195 SGD）
+          </a>
+        </div>
+        <div class="payment-card">
+          <img src="paypal-195.png" alt="PayPal 195 SGD">
+          <a class="btn btn-primary" href="https://www.paypal.com/ncp/payment/62ANSUWPRUX76" target="_blank">
+            PayPal 支付（195 SGD）
+          </a>
+        </div>
+        <div class="payment-card">
+          <img src="alipay-195.jpeg" alt="Alipay 195 SGD">
+          <span class="badge">支付宝</span>
+        </div>
       </div>
 
+      <!-- ===================== -->
       <!-- 套餐 B -->
-      <h2>套餐 B — 10节课</h2>
+      <!-- ===================== -->
+      <h2>套餐 B — 10 节课 ⭐</h2>
       <p><strong>费用：</strong>SGD 350</p>
-      <div class="qr-codes">
-        <img src="wise-350.png" alt="Wise 350 SGD">
-        <img src="paypal-350.png" alt="Paypal 350 SGD">
-        <img src="alipay-350.png" alt="Alipay 350 SGD">
+
+      <div class="payment-grid">
+        <div class="payment-card">
+          <img src="wise-350.png" alt="Wise 350 SGD">
+          <a class="btn btn-secondary" href="#">Wise 支付（350 SGD）</a>
+        </div>
+        <div class="payment-card">
+          <img src="paypal-350.png" alt="PayPal 350 SGD">
+          <a class="btn btn-primary" href="#">PayPal 支付（350 SGD）</a>
+        </div>
+        <div class="payment-card">
+          <img src="alipay-350.png" alt="Alipay 350 SGD">
+          <span class="badge">支付宝</span>
+        </div>
       </div>
 
+      <!-- ===================== -->
       <!-- 套餐 C -->
-      <h2>套餐 C — 20节课</h2>
+      <!-- ===================== -->
+      <h2>套餐 C — 20 节课</h2>
       <p><strong>费用：</strong>SGD 770</p>
-      <p>
-        <a href="https://www.paypal.com/ncp/payment/4GKWCZ565N6C8" target="_blank" rel="noopener">Paypal 770 SGD Link</a><br>
-        <a href="https://wise.com/pay/r/qFUyUfVfEwToIOc" target="_blank" rel="noopener">Wise 770 SGD Link</a>
-      </p>
-      <div class="qr-codes">
-        <img src="wise-770.png" alt="Wise 770 SGD">
-        <img src="paypal-770.png" alt="Paypal 770 SGD">
-        <img src="alipay-770.jpeg" alt="Alipay 770 SGD">
+
+      <div class="payment-grid">
+        <div class="payment-card">
+          <img src="wise-770.png" alt="Wise 770 SGD">
+          <a class="btn btn-secondary" href="https://wise.com/pay/r/qFUyUfVfEwToIOc" target="_blank">
+            Wise 支付（770 SGD）
+          </a>
+        </div>
+        <div class="payment-card">
+          <img src="paypal-770.png" alt="PayPal 770 SGD">
+          <a class="btn btn-primary" href="https://www.paypal.com/ncp/payment/4GKWCZ565N6C8" target="_blank">
+            PayPal 支付（770 SGD）
+          </a>
+        </div>
+        <div class="payment-card">
+          <img src="alipay-770.jpeg" alt="Alipay 770 SGD">
+          <span class="badge">支付宝</span>
+        </div>
       </div>
 
+      <!-- ===================== -->
       <!-- Refund Policy -->
-      <h2 style="color:#e74c3c;">退款政策</h2>
-      <ul style="color:#e74c3c;">
+      <!-- ===================== -->
+      <h2 class="refund-title">退款政策</h2>
+      <ul class="refund">
         <li>课程一经安排，不可取消。</li>
-        <li>若学生缺席，课程将不予补课。</li>
-        <li>若教师缺席，课程将安排补课或退款。</li>
+        <li>学生缺席，课程不予补课。</li>
+        <li>教师缺席，将安排补课或退款。</li>
       </ul>
 
     </div>
@@ -98,5 +162,6 @@
 <div class="footer">
   <div class="container">© Si Han Chen</div>
 </div>
+
 </body>
 </html>
