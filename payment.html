@@ -1,309 +1,48 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="zh-Hans">
 <head>
-  <meta charset="utf-8"/>
-  <title>付款信息 | Han’s English Lessons</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <style>
-    :root {
-      /* Matching the Homepage Dark Theme Colors */
-      --bg-dark: #0f172a;
-      --nav-bg: #0f172a;
-      --card-bg: rgba(255, 255, 255, 0.05);
-      --accent-blue: #3b82f6;
-      --text-white: #ffffff;
-      --text-muted: #94a3b8;
-      --border-color: rgba(255, 255, 255, 0.1);
-    }
-
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      color: var(--text-white);
-      /* Dark Gradient Background from Homepage */
-      background: radial-gradient(circle at top right, #1e293b, #0f172a 60%);
-      background-color: var(--bg-dark);
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-    }
-
-    /* Restored Full Navigation Bar */
-    .navbar {
-      background: var(--nav-bg);
-      border-bottom: 1px solid var(--border-color);
-      padding: 15px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(10px);
-    }
-
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 20px;
-    }
-
-    .logo {
-      font-weight: bold;
-      text-decoration: none;
-      color: white;
-      font-size: 1.1rem;
-      background: linear-gradient(90deg, #a78bfa, #60a5fa);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 15px;
-      margin: 0;
-      padding: 0;
-    }
-
-    .nav-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.3s;
-      padding: 8px 12px;
-      border-radius: 6px;
-    }
-
-    .nav-links a:hover, .nav-links a.active {
-      color: white;
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
-    h1 { font-size: 2.5rem; margin-bottom: 10px; }
-    header p { color: var(--text-muted); font-size: 1.1rem; }
-
-    .section-title {
-      font-size: 1.8rem;
-      margin: 40px 0 20px;
-      color: #60a5fa;
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 10px;
-    }
-
-    .price-label {
-      font-size: 1.3rem;
-      font-weight: bold;
-      color: #fbbf24;
-      margin-bottom: 20px;
-    }
-
-    /* Payment Grid & Cards */
-    .payment-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-      margin-bottom: 40px;
-    }
-
-    .payment-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 16px;
-      padding: 25px;
-      text-align: center;
-      backdrop-filter: blur(5px);
-    }
-
-    .payment-card img {
-      width: 100%;
-      max-width: 200px;
-      border-radius: 8px;
-      margin-bottom: 15px;
-      background: white;
-      padding: 10px;
-    }
-
-    .platform-name {
-      font-weight: bold;
-      margin-bottom: 15px;
-      display: block;
-      color: var(--text-white);
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 20px;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      width: 90%;
-      transition: transform 0.2s, background 0.3s;
-    }
-
-    .btn:hover { transform: translateY(-2px); filter: brightness(1.1); }
-    .btn-wise { background-color: #00b9ff; }
-    .btn-paypal { background-color: #003087; }
-
-    .bundle-badge {
-      display: inline-block;
-      background: rgba(59, 130, 246, 0.15);
-      border: 1px solid var(--accent-blue);
-      padding: 6px 12px;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      margin-bottom: 10px;
-      color: #93c5fd;
-    }
-
-    .notice-box {
-      background: rgba(59, 130, 246, 0.1);
-      border-left: 4px solid var(--accent-blue);
-      padding: 15px;
-      border-radius: 8px;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-
-    .policy-box {
-      background: rgba(239, 68, 68, 0.1);
-      border: 1px solid rgba(239, 68, 68, 0.2);
-      padding: 25px;
-      margin-top: 60px;
-      border-radius: 12px;
-    }
-
-    .policy-box h3 { color: #f87171; margin-top: 0; }
-    .policy-box ul { padding-left: 20px; color: #fca5a5; }
-
-    footer {
-      text-align: center;
-      padding: 60px 0 40px;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      border-top: 1px solid var(--border-color);
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>付款信息</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-<nav class="navbar">
-  <div class="nav-container">
-    <a class="logo" href="index.html">面向中文学习者的英语课程</a>
-    <ul class="nav-links">
-      <li><a href="index.html">首页</a></li>
-      <li><a href="trial-lesson.html">30分钟试课</a></li>
-      <li><a href="payment.html" class="active">付款信息</a></li>
-      <li><a href="full-lesson.html">现有学员预约课程</a></li>
-      <li><a href="availability.html">时间安排</a></li>
-      <li><a href="about.html">关于我</a></li>
-      <li><a href="contact.html">联系我</a></li>
-    </ul>
+<div class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html" aria-label="返回首页">
+      <span class="brand-badge" aria-hidden="true"></span>
+      <span>面向中文学习者的英语课程</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="trial.html">30分钟试课</a>
+      <a href="payment.html">付款信息</a>
+      <a href="https://cal.com/sihan/50分钟-英语课程" target="_blank" rel="noopener">现有学员预约课程</a>
+      <a href="availability.html">时间安排</a>
+      <a href="about.html">关于我</a>
+      <a href="contact.html">联系我</a>
+    </div>
   </div>
-</nav>
+</div>
 
-<main class="container">
-  <header>
-    <h1>付款方式</h1>
-    <p>英语课程 (针对中文母语者)</p>
-  </header>
+<section class="section">
+  <div class="container">
+    <div class="card">
+      <h1>付款信息</h1>
 
-  <div class="notice-box">
-    <strong>💡 重要提示：</strong> 请在确认课程日期和时间后再进行付款。
-  </div>
+      <p><strong>30分钟试课：</strong>SGD 10</p>
+      <p><strong>50分钟正式课：</strong>SGD 40</p>
 
-  <section>
-    <h2 class="section-title">30分钟试课 (Trial Lesson)</h2>
-    <p class="price-label">费用: SGD 10</p>
-    <div class="payment-grid">
-      <div class="payment-card">
-        <img alt="Wise QR" src="Wise QR Code for 10 SGD.png"/>
-        <span class="platform-name">Wise</span>
-        <a class="btn btn-wise" href="https://wise.com/pay/r/G6oYba89sF_hdaE" target="_blank">Wise 支付 (10 SGD)</a>
+      <!-- 套餐 A -->
+      <h2>套餐 A - 5节课</h2>
+      <p><strong>价格：</strong>SGD 195</p>
+      <p>
+        <a href="https://www.paypal.com/ncp/payment/62ANSUWPRUX76" target="_blank" rel="noopener">Paypal 195 SGD Link</a><br>
+        <a href="https://wise.com/pay/r/PxoNdZqBPngSYzA" target="_blank" rel="noopener">Wise 195 SGD Link</a>
+      </p>
+      <div class="qr-codes">
+        <img src="Alipay 195 SGD QR Code" alt="Alipay 套餐A付款二维码" style="max-width:200px; height:auto;">
+        <img src="Paypal 195 SGD" alt="Paypal 套餐A付款二维码" style="max-width:200px; height:auto;">
+        <img src="Wise QR Code for 195 SGD" alt="Wise 套餐A付款二维码" style="max-width:200px; height:auto;">
       </div>
-      <div class="payment-card">
-        <img alt="PayPal QR" src="Paypal 10 SGD QR Code.png"/>
-        <span class="platform-name">PayPal</span>
-        <a class="btn btn-paypal" href="https://www.paypal.com/ncp/payment/J2XUXJTUDVPZE" target="_blank">PayPal 支付 (10 SGD)</a>
-      </div>
-      <div class="payment-card">
-        <img alt="Alipay QR" src="Alipay 10 SGD QR Code.jpeg"/>
-        <span class="platform-name">支付宝 (Alipay)</span>
-        <p style="font-size: 0.8rem; color: var(--text-muted);">约 ¥54.10</p>
-      </div>
-    </div>
-  </section>
 
-  <section>
-    <h2 class="section-title">50分钟正式课 (Single Lesson)</h2>
-    <p class="price-label">费用: SGD 40</p>
-    <div class="payment-grid">
-      <div class="payment-card">
-        <img alt="Wise QR" src="Wise QR Code for 40 SGD.png"/>
-        <span class="platform-name">Wise</span>
-        <a class="btn btn-wise" href="https://wise.com/pay/r/tReG-6LSJ7pRjBU" target="_blank">Wise 支付 (40 SGD)</a>
-      </div>
-      <div class="payment-card">
-        <img alt="PayPal QR" src="Paypal 40 SGD QR Code.png"/>
-        <span class="platform-name">PayPal</span>
-        <a class="btn btn-paypal" href="https://www.paypal.com/ncp/payment/2KNN3Y8KMBEKY" target="_blank">PayPal 支付 (40 SGD)</a>
-      </div>
-      <div class="payment-card">
-        <img alt="Alipay QR" src="Alipay 40 SGD QR Code.jpeg"/>
-        <span class="platform-name">支付宝 (Alipay)</span>
-        <p style="font-size: 0.8rem; color: var(--text-muted);">约 ¥217.00</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="section-title">套餐 B — 10节课 (Bundle B ⭐)</h2>
-    <div class="bundle-badge">10 × 50分钟课程 | 共省 SGD 10</div>
-    <p class="price-label">费用: SGD 390</p>
-    <div class="payment-grid">
-      <div class="payment-card">
-        <img alt="Wise QR" src="Wise QR Code for 390 SGD.png"/>
-        <span class="platform-name">Wise</span>
-        <a class="btn btn-wise" href="https://wise.com/pay/r/2AcEZ87mfF8oC4M" target="_blank">Wise 支付 (390 SGD)</a>
-      </div>
-      <div class="payment-card">
-        <img alt="PayPal QR" src="Paypal 390 SGD.png"/>
-        <span class="platform-name">PayPal</span>
-        <a class="btn btn-paypal" href="https://www.paypal.com/ncp/payment/4RKCTJJCQUVGU" target="_blank">PayPal 支付 (390 SGD)</a>
-      </div>
-      <div class="payment-card">
-        <img alt="Alipay QR" src="Alipay 390 SGD QR Code.jpeg"/>
-        <span class="platform-name">支付宝 (Alipay)</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="policy-box">
-    <h3>退款与取消政策 (Refund & Policy)</h3>
-    <ul>
-      <li><strong>试课：</strong>试课费用不予退还。</li>
-      <li><strong>7天冷静期：</strong>套餐购买提供全额退款保障（未上课前）。</li>
-      <li><strong>24小时通知：</strong>取消已预约的课程需提前至少 24 小时通知。</li>
-    </ul>
-  </section>
-</main>
-
-<footer>
-  © Si Han Chen | 在线英语一对一教学
-</footer>
-
-</body>
-</html>
