@@ -78,3 +78,18 @@ ul{padding-left:20px;color:var(--muted);line-height:1.75;margin:10px 0 0}
 .video iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:20px}
 .video img{width:100%;border-radius:20px;display:block}
 .footer{padding:44px 0;color:var(--muted);font-size:13px}
+
+/* ✅ QR Code Layout Fix */
+.qr-codes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+.qr-codes img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
