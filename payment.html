@@ -7,10 +7,10 @@
   <link rel="stylesheet" href="styles.css" />
   <style>
     .payment-section { margin-bottom: 40px; }
-    .price-tag { font-weight: bold; margin-bottom: 15px; }
+    .price-tag { font-weight: bold; margin-bottom: 15px; display: block; }
     .qr-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 20px;
       margin-top: 15px;
     }
@@ -18,32 +18,38 @@
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid var(--border);
       border-radius: 16px;
-      padding: 15px;
+      padding: 20px;
       text-align: center;
     }
     .qr-card img {
       width: 100%;
-      max-width: 180px;
+      max-width: 200px;
+      aspect-ratio: 1/1;
+      object-fit: contain;
       border-radius: 8px;
       margin-bottom: 12px;
+      background: white; /* Helps QR codes stand out */
     }
     .pay-btn {
       display: block;
-      padding: 10px;
+      padding: 12px;
       border-radius: 8px;
       font-size: 14px;
       font-weight: bold;
       background: var(--brand);
       color: white;
+      text-decoration: none;
     }
     .alipay-btn { background: #00a3ee; }
     .refund-policy-box {
       margin-top: 50px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border);
+      padding: 20px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 71, 71, 0.3);
+      background: rgba(255, 71, 71, 0.05);
     }
-    .refund-policy-box h3 { color: #ff6b6b; margin-bottom: 10px; }
-    .refund-policy-box li { color: #ffb3b3; margin-bottom: 5px; }
+    .refund-policy-box h3 { color: #ff6b6b; margin-top: 0; }
+    .refund-policy-box li { color: #ffb3b3; margin-bottom: 8px; }
   </style>
 </head>
 <body>
@@ -70,91 +76,91 @@
 
   <div class="payment-section">
     <h2>30分钟试课</h2>
-    <p class="price-tag">费用：SGD 10</p>
+    <span class="price-tag">费用：SGD 10</span>
     <div class="qr-grid">
       <div class="qr-card">
         <img src="wise-10.png" alt="Wise 10">
-        <a href="#" class="pay-btn">Wise (10 SGD)</a>
+        <div class="pay-btn">Wise (10 SGD)</div>
       </div>
       <div class="qr-card">
         <img src="paypal-10.png" alt="Paypal 10">
-        <a href="#" class="pay-btn">PayPal (10 SGD)</a>
+        <div class="pay-btn">PayPal (10 SGD)</div>
       </div>
     </div>
   </div>
 
   <div class="payment-section">
     <h2>50分钟正式课 (Single Lesson)</h2>
-    <p class="price-tag">费用：SGD 40</p>
+    <span class="price-tag">费用：SGD 40</span>
     <div class="qr-grid">
       <div class="qr-card">
         <img src="wise-40.png" alt="Wise 40">
-        <a href="#" class="pay-btn">Wise (40 SGD)</a>
+        <div class="pay-btn">Wise (40 SGD)</div>
       </div>
       <div class="qr-card">
         <img src="paypal-40.png" alt="Paypal 40">
-        <a href="#" class="pay-btn">PayPal (40 SGD)</a>
+        <div class="pay-btn">PayPal (40 SGD)</div>
       </div>
       <div class="qr-card">
-        <img src="alipay-40.jpg" alt="Alipay 40">
-        <span class="pay-btn alipay-btn">支付宝</span>
+        <img src="alipay-40.jpeg" alt="Alipay 40">
+        <div class="pay-btn alipay-btn">支付宝</div>
       </div>
     </div>
   </div>
 
   <div class="payment-section">
     <h2>套餐 A — 5 节课</h2>
-    <p class="price-tag">费用：SGD 195</p>
+    <span class="price-tag">费用：SGD 195</span>
     <div class="qr-grid">
       <div class="qr-card">
         <img src="wise-195.png" alt="Wise 195">
-        <a href="#" class="pay-btn">Wise (195 SGD)</a>
+        <div class="pay-btn">Wise (195 SGD)</div>
       </div>
       <div class="qr-card">
         <img src="paypal-195.png" alt="Paypal 195">
-        <a href="#" class="pay-btn">PayPal (195 SGD)</a>
+        <div class="pay-btn">PayPal (195 SGD)</div>
       </div>
       <div class="qr-card">
-        <img src="alipay-195.jpg" alt="Alipay 195">
-        <span class="pay-btn alipay-btn">支付宝</span>
+        <img src="alipay-195.jpeg" alt="Alipay 195">
+        <div class="pay-btn alipay-btn">支付宝</div>
       </div>
     </div>
   </div>
 
   <div class="payment-section">
     <h2>套餐 B — 10 节课 ⭐</h2>
-    <p class="price-tag">费用：SGD 390</p>
+    <span class="price-tag">费用：SGD 390</span>
     <div class="qr-grid">
       <div class="qr-card">
         <img src="wise-390.png" alt="Wise 390">
-        <a href="https://wise.com/pay/r/2AcEZ87mfF8oC4M" class="pay-btn" target="_blank">Wise (390 SGD)</a>
+        <a href="https://wise.com/pay/r/2AcEZ87mfF8oC4M" class="pay-btn" target="_blank">点击支付 Wise</a>
       </div>
       <div class="qr-card">
         <img src="paypal-390.png" alt="Paypal 390">
-        <a href="https://www.paypal.com/ncp/payment/4RKCTJJCQUVGU" class="pay-btn" target="_blank">PayPal (390 SGD)</a>
+        <a href="https://www.paypal.com/ncp/payment/4RKCTJJCQUVGU" class="pay-btn" target="_blank">点击支付 PayPal</a>
       </div>
       <div class="qr-card">
-        <img src="alipay-390.jpg" alt="Alipay 390">
-        <span class="pay-btn alipay-btn">支付宝</span>
+        <img src="alipay-390.jpeg" alt="Alipay 390">
+        <div class="pay-btn alipay-btn">支付宝</div>
       </div>
     </div>
   </div>
 
   <div class="payment-section">
     <h2>套餐 C — 20 节课</h2>
-    <p class="price-tag">费用：SGD 770</p>
+    <span class="price-tag">费用：SGD 770</span>
     <div class="qr-grid">
       <div class="qr-card">
         <img src="wise-770.png" alt="Wise 770">
-        <a href="#" class="pay-btn">Wise (770 SGD)</a>
+        <div class="pay-btn">Wise (770 SGD)</div>
       </div>
       <div class="qr-card">
         <img src="paypal-770.png" alt="Paypal 770">
-        <a href="#" class="pay-btn">PayPal (770 SGD)</a>
+        <div class="pay-btn">PayPal (770 SGD)</div>
       </div>
       <div class="qr-card">
-        <img src="alipay-770.jpg" alt="Alipay 770">
-        <span class="pay-btn alipay-btn">支付宝</span>
+        <img src="alipay-770.jpeg" alt="Alipay 770">
+        <div class="pay-btn alipay-btn">支付宝</div>
       </div>
     </div>
   </div>
